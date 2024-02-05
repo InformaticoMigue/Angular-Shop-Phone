@@ -1,0 +1,22 @@
+<article class="flex flex-col gap-14 px-20">
+    <article  *ngFor="let phone of phones">
+        <div class="flex gap-20 items-center">
+            <img class="w-1/6" src="{{phone.image}}" alt="" srcset="">
+            <div class="text-center w-full">
+                <p>{{phone.name}}</p>
+                <p>{{phone.description}}</p>
+            </div>
+            <p>{{phone.price}}€</p>
+            <div class="flex gap-12 w-full text-white">
+                <button (click)="incrementCant(phone.id)" class="w-1/12 rounded bg-gradient-to-r from-sky-500 to-indigo-500">+</button>
+                <p class="text-black" >{{phone.cant}}</p>
+                <button (click)="decrementCant(phone.id)" class="w-1/12 rounded bg-gradient-to-r from-sky-500 to-indigo-500">-</button>
+            </div>
+            <button (click)="deletePhone(phone.id)" class="w-1/4 h-10 text-white rounded bg-gradient-to-r from-red-500 to-orange-500">Delete</button>
+        </div>
+    </article>
+    <div *ngIf="phones.length > 0" class="w-full flex justify-end">
+        <button class="w-1/12 p-2 text-white rounded bg-gradient-to-r from-green-500 to-lime-600">Buy</button>
+    </div>
+</article>
+

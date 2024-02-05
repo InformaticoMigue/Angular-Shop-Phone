@@ -1,0 +1,18 @@
+<article class="grid grid-cols-2 gap-20 px-20">
+    <article>
+        <img src="{{phone.image}}" alt="">
+    </article>
+    <article class="flex flex-col gap-10">
+        <div class="text-center">
+            <h1 class="text-6xl font-bold">{{phone.name}}</h1>
+        </div>
+        <div class="flex flex-col items-center gap-5">
+            <p>{{phone.description}}</p>
+            <a [routerLink]="['/providers',phone.provider.id]">Click here to show detail of provider</a>
+            <div class="grid grid-cols-2 items-center w-1/2">
+                <p class="text-3xl font-bold">{{phone.price}}€</p>
+                <button (click)="pressBuy()" class="hover:bg-blue-400 text-2xl transition-all bg-blue-500 text-center p-2 rounded text-white">Buy Phone</button>
+            </div>
+        </div>
+    </article>
+</article>

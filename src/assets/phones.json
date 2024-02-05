@@ -1,0 +1,63 @@
+[
+  {
+    "id": 1,
+    "name": "iPhone 13",
+    "description": "The iPhone with incredible features",
+    "price": 1099.99,
+    "provider": {
+      "id": 101,
+      "name": "Apple",
+      "image": "https://images.unsplash.com/photo-1662946834879-e42e04811369?q=80&w=1856&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    "image": "https://images.unsplash.com/photo-1636108840454-8fbe394c7837?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 2,
+    "name": "Samsung Galaxy S21",
+    "description": "Powerful Samsung smartphone with AMOLED screen",
+    "price": 999.99,
+    "provider": {
+      "id": 102,
+      "name": "Samsung",
+      "image": "https://images.unsplash.com/photo-1662947995689-ec5165848ad0?q=80&w=1856&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    "image": "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 3,
+    "name": "Google Pixel 6",
+    "description": "Phone with an excellent camera from Google",
+    "price": 799.99,
+    "provider": {
+      "id": 103,
+      "name": "Google",
+      "image": "https://images.unsplash.com/photo-1662947203440-573db428a7ab?q=80&w=1856&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    "image": "https://images.unsplash.com/photo-1657803905676-d6e67caf1d3b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    "id": 4,
+    "name": "Xiaomi redmi note 12",
+    "description": "High-end performance at an affordable price",
+    "price": 899.99,
+    "provider": {
+      "id": 104,
+      "name": "Xiomi",
+      "image": "https://images.unsplash.com/photo-1662948099967-820a793a8013?q=80&w=1856&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    "image": "https://images.unsplash.com/photo-1656758211329-5e142274bb59?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },  
+  {
+    "id": 6,
+    "name": "Samsung Galaxy Note 10",
+    "description": "Premium Samsung phone with S Pen functionality",
+    "price": 1099.99,
+    "provider": {
+      "id": 102,
+      "name": "Samsung",
+      "image": "https://images.unsplash.com/photo-1662948203800-ea9d97f7be3d?q=80&w=1856&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    "image": "https://images.unsplash.com/photo-1565967249821-083c4775e5bc?q=80&w=1931&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  }
+]
+
