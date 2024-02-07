@@ -1,10 +1,5 @@
 <article class="px-20 gap-10 grid grid-cols-3">
-  <div class="flex flex-col gap-5" 
-  *ngFor="let phone of phonesArray">
-    <img class="cursor-pointer" [routerLink]="['/products', phone.id]" [title]="phone.name" src="{{phone.image}}" alt="Phone Image" srcset="">
-    <div class="flex justify-around">
-      <h1>{{phone.name}}</h1>
-      <h1>{{phone.price}}€</h1>
-    </div>
-  </div>
+    @for (phone of phonesArray; track phone.id) {
+      <app-phone-card [phone]="phone"></app-phone-card>
+    }
 </article>

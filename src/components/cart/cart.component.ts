@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CartService } from '../../service/Cart.service';
 import { CommonModule } from '@angular/common';
-import { Phone, PhoneDTO } from '../../assets/types/Phone';
+import { PhoneDTO } from '../../assets/types/Phone';
 import { PhoneService } from '../../service/Phones.service';
 
 

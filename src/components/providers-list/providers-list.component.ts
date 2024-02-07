@@ -3,11 +3,12 @@ import { ProviderService } from '../../service/Provider.service';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { Provider } from '../../assets/types/Provider';
+import { ProviderCardComponent } from '../provider-card/provider-card.component';
 
 @Component({
   selector: 'app-providers-list',
   standalone: true,
-  imports: [CommonModule,RouterLink],
+  imports: [CommonModule,RouterLink,ProviderCardComponent],
   templateUrl: './providers-list.component.html',
   styleUrls: ['../../styles.css']
 })
