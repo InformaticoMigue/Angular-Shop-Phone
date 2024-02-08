@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { ProvidersListComponent } from '../providers-list/providers-list.component';
 import { PhonesListComponent } from '../phones-list/phones-list.component';
+import { PhoneService } from '../../service/Phones.service';
+import { Phone } from '../../assets/types/Phone';
           
 
 @Component({
@@ -14,9 +16,9 @@ import { PhonesListComponent } from '../phones-list/phones-list.component';
 })
 export class AppHomeComponent implements OnInit {
 
-  constructor() {
-  }
-
+  phoneService: PhoneService = inject(PhoneService); 
+  phones:Phone[] = this.phoneService.getAllPhones();
+  
   ngOnInit() {
   }
 

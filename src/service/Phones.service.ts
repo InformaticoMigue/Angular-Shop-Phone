@@ -19,7 +19,7 @@ export class PhoneService {
   }
   
   public getPhonesByProvider(provider:Provider): Phone[]{
-    return phones.filter(phone => phone.provider.name == provider.name)!
+    return phones.filter(phone => phone.provider.id == provider.id)!
   }
 
   

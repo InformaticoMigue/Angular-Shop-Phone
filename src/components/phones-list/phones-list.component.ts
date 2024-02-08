@@ -1,10 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, inject } from '@angular/core';
 import { PhoneService } from '../../service/Phones.service';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { Phone } from '../../assets/types/Phone';
 import { PhoneCardComponent } from '../phone-card/phone-card.component';
-
 
 @Component({
   selector: 'app-phones-list',
@@ -15,12 +14,12 @@ import { PhoneCardComponent } from '../phone-card/phone-card.component';
 })
 export class PhonesListComponent implements OnInit {
 
-  phonesArray!:Phone[];
+  @Input()
+  phonesList:Phone[] = [];
+  servicePhone:PhoneService = inject(PhoneService);
 
-  constructor(private servicePhone:PhoneService) {}
 
   ngOnInit() {
-    this.phonesArray = this.servicePhone.getAllPhones();
   }
 
 }

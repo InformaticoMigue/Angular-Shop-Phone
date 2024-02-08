@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { PhoneService } from '../../service/Phones.service';
 import { CommonModule } from '@angular/common';
@@ -9,21 +9,19 @@ import { MapperPhone } from '../../mapper/mapperPhone';
 
 
 @Component({
-  selector: 'app-ProductDetails',
+  selector: 'app-phone-details',
   standalone: true,
-  providers: [MapperPhone],
   imports: [CommonModule, RouterLink],
-  templateUrl: './app-product-details.component.html',
+  templateUrl: './app-phone-details.component.html',
   styleUrls: ['../../styles.css']
 })
-export class ProductDetailsComponent implements OnInit {
+export class PhoneDetailsComponent implements OnInit {
 
   phone!:Phone;
-
-  constructor(private route: ActivatedRoute, 
-    private servicePhone: PhoneService,
-    private router: Router,
-    private serviceCart: CartService) {}
+  route: ActivatedRoute = inject(ActivatedRoute)
+  servicePhone: PhoneService = inject(PhoneService)
+  router: Router = inject(Router)
+  serviceCart: CartService = inject(CartService)
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {

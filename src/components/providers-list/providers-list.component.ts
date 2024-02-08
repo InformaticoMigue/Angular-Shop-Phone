@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { ProviderService } from '../../service/Provider.service';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
@@ -15,9 +15,7 @@ import { ProviderCardComponent } from '../provider-card/provider-card.component'
 export class ProvidersListComponent implements OnInit {
 
   providers!:Provider[];
-  
-  constructor(private providerService: ProviderService) { 
-  }
+  providerService: ProviderService = inject(ProviderService)
 
   ngOnInit() {
     const providerAll = this.providerService.getAllProviders();

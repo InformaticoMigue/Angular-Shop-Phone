@@ -7,21 +7,18 @@ import { Provider } from '../assets/types/Provider';
 })
 export class ProviderService {
 
-  constructor() { }
+  private providers: Provider[] = this.getAllProviders();  
 
   public getAllProviders(): Provider[]{
-    
     return phones.map(phone => phone.provider)
   }
 
   public getProvider(id: number): Provider{
-    const providers = this.getAllProviders();
-    return providers.find(provider => provider.id == id)!;
+    return this.providers.find(provider => provider.id == id)!;
   }
 
   public getProviderByName(name: string): Provider{
-    const providers = this.getAllProviders();
-    return providers.find(provider => provider.name == name)!;
+    return this.providers.find(provider => provider.name == name)!;
   }
 
 

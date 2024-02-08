@@ -1,13 +1,10 @@
-<article class="bg-gradient-to-r from-sky-500 to-indigo-500  text-white px-20 py-5">
-    <article class="flex justify-between items-center">
-        <div [routerLink]="''" class="flex cursor-pointer text-3xl">
-            <h1>Phone Shop</h1>
-        </div>
-        <div class="flex items-center gap-10">
-            <div [routerLink]="'cart'" class="cursor-pointer flex w-52 text-2xl bg-white p-3 rounded items-center justify-center gap-5">
-                <h1 class="text-blue-500">Checkout</h1>
-                <i class="text-blue-500 fa-solid fa-cart-shopping"></i>
-            </div>
-        </div>
-    </article>
+<article class="bg-gradient-to-r grid grid-cols-2 from-sky-500 to-indigo-500  text-white px-20 py-5">
+    <div class="flex items-center text-3xl">
+        <a [routerLink]="''" class="cursor-pointer">Phone Shop</a>
+    </div>
+    <ul class="flex gap-10 justify-end items-center">
+        <li>
+            <a [routerLink]="'cart'" class="cursor-pointer flex w-52 text-2xl bg-white p-3 rounded items-center justify-center gap-5 text-blue-500">Checkout<i class="fa-solid fa-cart-shopping"></i>                </a>
+        </li>
+    </ul>
 </article>

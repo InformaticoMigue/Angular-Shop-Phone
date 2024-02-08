@@ -1,5 +1,5 @@
 <article class="px-20 gap-10 grid grid-cols-3">
-    @for (phone of phonesArray; track phone.id) {
+    @for (phone of phonesList; track phone.id) {
       <app-phone-card [phone]="phone"></app-phone-card>
     }
 </article>

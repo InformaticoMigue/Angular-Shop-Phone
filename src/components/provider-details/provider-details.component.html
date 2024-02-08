@@ -1,4 +1,5 @@
-<article class="px-20 mb-10 flex justify-center items-center flex-col gap-20">
+<article class="px-20 mb-10 flex justify-center items-center flex-col gap-12">
   <h1 class="text-5xl">{{provider.name}}</h1>
+  <a [routerLink]="['/products',provider.name]">Click here to show the phones of this provider</a>
   <img class="w-1/2" src="{{provider.image}}" alt="" srcset="">
 </article>
