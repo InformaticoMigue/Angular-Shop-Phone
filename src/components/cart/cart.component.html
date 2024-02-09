@@ -1,5 +1,5 @@
-<article class="flex flex-col gap-14 px-20">
-    <article>
+<article class="flex flex-col gap-14 px-20 mb-5">
+    <article class="flex flex-col gap-4">
         @for (phone of phones; track phone.id) {
             <div class="flex gap-20 items-center">
                 <img class="w-1/6" src="{{phone.image}}" alt="" srcset="">
@@ -18,7 +18,7 @@
         }
     </article>
     @if (phones.length > 0) {
-        <app-register-purchase></app-register-purchase>
+        <app-register-purchase (shareForm)="clearForm()"></app-register-purchase>
     }
 </article>
 

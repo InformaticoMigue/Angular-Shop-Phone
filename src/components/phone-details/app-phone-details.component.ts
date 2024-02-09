@@ -35,7 +35,7 @@ export class PhoneDetailsComponent implements OnInit {
     const phoneDTO:PhoneDTO = MapperPhone.convertPhoneDTO(this.phone)
     if (this.serviceCart.getPhone(phoneDTO.id)) {
         const phoneInCart = this.serviceCart.getPhone(phoneDTO.id);
-        phoneInCart.cant = phoneInCart.cant+1; 
+        phoneInCart.cant = phoneInCart.cant+1;     
     }else{
       this.serviceCart.addPhone(phoneDTO)
     }

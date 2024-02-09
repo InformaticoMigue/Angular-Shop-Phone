@@ -11,7 +11,6 @@ export const routes: Routes = [
     {path: 'product/:productId', component: PhoneDetailsComponent},
     {path: 'providers/:providerId', component: ProviderDetailsComponent},
     {path: 'products/:providerName', component: FilterProviderComponent},
-
     {path: '**', redirectTo: '', pathMatch: 'full'},
 
 ];

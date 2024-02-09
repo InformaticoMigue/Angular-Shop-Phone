@@ -52,4 +52,9 @@ export class CartComponent implements OnInit {
     this.phones = this.getAllPhones();    
   }
 
+  public clearForm():void {
+    this.serviceCart.deleteAllPhones();
+    this.phones = this.getAllPhones();    
+  }
+
 }

@@ -29,6 +29,10 @@ export class CartService {
     return this.phones.find(ph => ph.id === id)!;
   }
 
+  public deleteAllPhones(): void {
+    this.phones = [];
+    
+  }
   
 
 }

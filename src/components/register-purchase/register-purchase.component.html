@@ -1,3 +1,7 @@
-<p>
-  register-purchase works!
-</p>
+<form class="w-1/4 flex flex-col gap-5 gap-x-4" [formGroup]="purshaseForm" (submit)="submit()">
+  <label class="text-2xl" for="email">Email</label>
+  <input class="p-2 bg-blue-100 rounded-sm" type="text" id="email" name="email" formControlName="email">
+  <label class="text-2xl" for="password">Password</label>
+  <input class="p-2 bg-blue-100 rounded-sm mb-4" type="text" id="password" name="password" formControlName="password">
+  <button [disabled]="purshaseForm.invalid" [ngClass]="purshaseForm.invalid ? 'bg-gray-200 text-black' : 'bg-blue-500 text-white cursor-pointer'" class=" text-2xl w-auto text-center rounded p-2" >Purshase</button>
+</form>
