@@ -22,6 +22,13 @@ export class PhoneService {
     return phones.filter(phone => phone.provider.id == provider.id)!
   }
 
+  public getPhoneLocalStorage(id:number) {
+    const phonesPurchase:Phone[] = JSON.parse(localStorage.getItem("phonesPurchase")!)
+    
+    return phonesPurchase.find(p => p.id == id)
+    
+  }
+
   
 
   

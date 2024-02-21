@@ -22,12 +22,16 @@ export class PhoneDetailsComponent implements OnInit {
   servicePhone: PhoneService = inject(PhoneService)
   router: Router = inject(Router)
   serviceCart: CartService = inject(CartService)
+  isPreviouslyPurchased: boolean = false
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       const phoneId = +params.get('productId')!;
       const phone:Phone = this.servicePhone.getPhone(phoneId);
       phone == undefined ? this.router.navigate(['']) : this.phone = phone; 
+      if (this.servicePhone.getPhoneLocalStorage(phoneId) != undefined) {
+        this.isPreviouslyPurchased = true;
+      }
     });
   }
 

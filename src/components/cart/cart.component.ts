@@ -1,6 +1,5 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CartService } from '../../service/Cart.service';
-import { CommonModule } from '@angular/common';
 import { PhoneDTO } from '../../assets/types/Phone';
 import { PhoneService } from '../../service/Phones.service';
 import { RegisterPurchaseComponent } from '../register-purchase/register-purchase.component';
@@ -8,7 +7,7 @@ import { RegisterPurchaseComponent } from '../register-purchase/register-purchas
 @Component({
   selector: 'app-cart',
   standalone: true,
-  imports: [CommonModule, RegisterPurchaseComponent],
+  imports: [RegisterPurchaseComponent],
   templateUrl: './cart.component.html',
   styleUrls: ['../../styles.css']
 })
@@ -52,9 +51,10 @@ export class CartComponent implements OnInit {
     this.phones = this.getAllPhones();    
   }
 
-  public clearForm():void {
+  public purshase():void {
+    this.serviceCart.saveLocalStorage(this.phones);
     this.serviceCart.deleteAllPhones();
-    this.phones = this.getAllPhones();    
+    this.phones = this.getAllPhones();
   }
 
 }

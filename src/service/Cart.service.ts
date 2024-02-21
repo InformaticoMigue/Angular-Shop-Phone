@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { PhoneDTO } from '../assets/types/Phone';
+import { Phone, PhoneDTO } from '../assets/types/Phone';
 
 @Injectable({
   providedIn: 'root'
@@ -31,7 +31,18 @@ export class CartService {
 
   public deleteAllPhones(): void {
     this.phones = [];
-    
+  }
+
+  public saveLocalStorage(arrayPhones:PhoneDTO[]){
+    if (localStorage.getItem("phonesPurchase")!= null) {
+      const items:PhoneDTO[] = JSON.parse(localStorage.getItem("phonesPurchase")!)
+      for (const phone of arrayPhones) {
+        items.push(phone);
+      }
+      localStorage.setItem('phonesPurchase', JSON.stringify(items));
+    }else{
+      localStorage.setItem('phonesPurchase', JSON.stringify(this.phones));
+    }
   }
   
 
